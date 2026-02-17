@@ -1,16 +1,8 @@
 "use client"
 
-import * as React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
+import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import Autoplay from "embla-carousel-autoplay";
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
 
 const testimonialImageIds = [
   'testimonial-whatsapp-1',
@@ -22,10 +14,6 @@ const testimonialImageIds = [
 ];
 
 export function Testimonials() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 1000, stopOnInteraction: false })
-  );
-
   const testimonialImages = PlaceHolderImages.filter((p) =>
     testimonialImageIds.includes(p.id)
   );
@@ -41,35 +29,26 @@ export function Testimonials() {
             A satisfação de quem já transformou o material escolar.
           </p>
         </div>
-        <Carousel
-            plugins={[plugin.current]}
-            className="w-full"
-            opts={{
-                loop: true,
-                align: 'start',
-            }}
-        >
-            <CarouselContent>
-            {testimonialImages.map((testimonial) => (
-                <CarouselItem key={testimonial.id} className="sm:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                        <Card className="overflow-hidden rounded-lg shadow-lg">
-                        <CardContent className="p-0">
-                            <Image
-                            src={testimonial.imageUrl}
-                            alt={testimonial.description}
-                            width={400}
-                            height={800}
-                            className="w-full h-auto object-cover"
-                            data-ai-hint={testimonial.imageHint}
-                            />
-                        </CardContent>
+        <div className="relative w-full overflow-hidden">
+            <div className="flex w-max animate-marquee">
+                {[...testimonialImages, ...testimonialImages].map((testimonial, index) => (
+                    <div key={`${testimonial.id}-${index}`} className="flex-shrink-0 px-2">
+                        <Card className="overflow-hidden rounded-lg shadow-lg w-72">
+                            <CardContent className="p-0">
+                                <Image
+                                    src={testimonial.imageUrl}
+                                    alt={testimonial.description}
+                                    width={400}
+                                    height={800}
+                                    className="w-full h-auto object-cover"
+                                    data-ai-hint={testimonial.imageHint}
+                                />
+                            </CardContent>
                         </Card>
                     </div>
-                </CarouselItem>
-            ))}
-            </CarouselContent>
-        </Carousel>
+                ))}
+            </div>
+        </div>
       </div>
     </section>
   );
