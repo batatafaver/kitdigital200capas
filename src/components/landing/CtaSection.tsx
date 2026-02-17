@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Check } from 'lucide-react';
 import Image from 'next/image';
 
@@ -33,8 +33,8 @@ export function CtaSection() {
               <CardTitle className="text-2xl">Pacote Básico</CardTitle>
               <CardDescription className="text-4xl font-bold">R$ 10</CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-col flex-grow">
-              <ul className="space-y-3 mb-8">
+            <CardContent className="flex-grow">
+              <ul className="space-y-3">
                 {basicFeatures.map((feature, index) => (
                   <li key={index} className="flex items-center">
                     <Check className="h-5 w-5 text-green-500 mr-3 shrink-0" />
@@ -42,10 +42,21 @@ export function CtaSection() {
                   </li>
                 ))}
               </ul>
-              <Button size="lg" variant="outline" className="w-full mt-auto">
-                Selecionar Básico
-              </Button>
             </CardContent>
+            <CardFooter className="flex-col pt-6">
+                <Button size="lg" variant="outline" className="w-full">
+                    Selecionar Básico
+                </Button>
+                <div className="mt-4">
+                    <Image
+                        src="https://i.postimg.cc/c48Dp6Hp/image.png"
+                        alt="Formas de pagamento aceitas"
+                        width={351}
+                        height={40}
+                        className="max-w-full h-auto"
+                    />
+                </div>
+            </CardFooter>
           </Card>
 
           <Card className="flex flex-col border-primary border-2 relative shadow-2xl">
@@ -56,8 +67,8 @@ export function CtaSection() {
               <CardTitle className="text-2xl">Pacote Premium</CardTitle>
               <CardDescription className="text-4xl font-bold text-primary">R$ 19</CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-col flex-grow">
-              <ul className="space-y-3 mb-8">
+            <CardContent className="flex-grow">
+              <ul className="space-y-3">
                 {premiumFeatures.map((feature, index) => (
                   <li key={index} className="flex items-center font-medium">
                     <Check className="h-5 w-5 text-green-500 mr-3 shrink-0" />
@@ -65,20 +76,22 @@ export function CtaSection() {
                   </li>
                 ))}
               </ul>
-              <Button size="lg" className="w-full mt-auto text-lg h-auto py-4">
-                QUERO O PACOTE PREMIUM
-              </Button>
             </CardContent>
+            <CardFooter className="flex-col pt-6">
+                <Button size="lg" className="w-full text-lg h-auto py-4">
+                    QUERO O PACOTE PREMIUM
+                </Button>
+                <div className="mt-4">
+                    <Image
+                        src="https://i.postimg.cc/c48Dp6Hp/image.png"
+                        alt="Formas de pagamento aceitas"
+                        width={351}
+                        height={40}
+                        className="max-w-full h-auto"
+                    />
+                </div>
+            </CardFooter>
           </Card>
-        </div>
-        <div className="mt-8 flex justify-center">
-            <Image
-                src="https://i.postimg.cc/c48Dp6Hp/image.png"
-                alt="Formas de pagamento aceitas"
-                width={351}
-                height={40}
-                className="max-w-full h-auto"
-            />
         </div>
       </div>
     </section>
