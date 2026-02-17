@@ -7,11 +7,11 @@ export function Header() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex items-center">
           <BookCopy className="h-6 w-6 mr-2 text-primary" />
-          <span className="font-bold">Notebook Covers</span>
+          <span className="font-bold">Capas Infantis</span>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-2">
-            <Button>Comprar Agora</Button>
+            <Button>Quero as Capas Agora</Button>
           </nav>
         </div>
       </div>

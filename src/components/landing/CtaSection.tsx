@@ -1,42 +1,74 @@
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Check } from 'lucide-react';
 
-const features = [
-  'Acesso a todos os templates',
+const basicFeatures = [
+  '+50 Capas de Caderno',
+  'Temas variados',
   'Editável no Canva gratuito',
-  'Download instantâneo',
-  'Uso pessoal e comercial',
-  'Suporte via e-mail',
+];
+const premiumFeatures = [
+  '+200 Capas de Caderno',
+  'Todos os temas e personagens',
+  'Bônus Exclusivos',
+  'Planner Semanal',
+  'Etiquetas para Material',
+  'Horário de Aulas',
+  'Acesso vitalício',
 ];
 
 export function CtaSection() {
   return (
     <section className="py-20 bg-secondary/50">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto bg-card rounded-xl shadow-2xl p-8 md:p-12 text-center border">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold font-headline">
-            Adquira o Pacote Completo Agora!
+            Escolha o melhor plano para você
           </h2>
-          <p className="mt-4 text-5xl font-bold text-primary">R$ 47,90</p>
-          <p className="text-muted-foreground">
-            Pagamento único, acesso vitalício.
-          </p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <Card className="flex flex-col">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl">Pacote Básico</CardTitle>
+              <CardDescription className="text-4xl font-bold">R$ 10</CardDescription>
+            </CardHeader>
+            <CardContent className="flex flex-col flex-grow">
+              <ul className="space-y-3 mb-8">
+                {basicFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center">
+                    <Check className="h-5 w-5 text-green-500 mr-3 shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button size="lg" variant="outline" className="w-full mt-auto">
+                Selecionar Básico
+              </Button>
+            </CardContent>
+          </Card>
 
-          <ul className="mt-8 mb-10 text-left space-y-3 max-w-sm mx-auto">
-            {features.map((feature, index) => (
-              <li key={index} className="flex items-center">
-                <Check className="h-5 w-5 text-green-500 mr-3 shrink-0" />
-                <span>{feature}</span>
-              </li>
-            ))}
-          </ul>
-
-          <Button size="lg" className="w-full md:w-auto text-lg h-auto py-4 px-10">
-            Comprar Pacote Completo
-          </Button>
-          <p className="mt-4 text-sm text-muted-foreground">
-            Compra 100% segura. 7 dias de garantia.
-          </p>
+          <Card className="flex flex-col border-primary border-2 relative shadow-2xl">
+            <div className="absolute -top-4 right-4 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
+              MAIS VENDIDO
+            </div>
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl">Pacote Premium</CardTitle>
+              <CardDescription className="text-4xl font-bold text-primary">R$ 19</CardDescription>
+            </CardHeader>
+            <CardContent className="flex flex-col flex-grow">
+              <ul className="space-y-3 mb-8">
+                {premiumFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center font-medium">
+                    <Check className="h-5 w-5 text-green-500 mr-3 shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button size="lg" className="w-full mt-auto text-lg h-auto py-4">
+                QUERO O PACOTE PREMIUM
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

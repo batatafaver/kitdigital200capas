@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Notebook Covers',
-  description: 'Crie e personalize capas incríveis para seus cadernos.',
+  title: 'Capas de Caderno Infantis Editáveis',
+  description: '+200 capas de caderno infantis para editar no Canva.',
 };
 
 export default function RootLayout({

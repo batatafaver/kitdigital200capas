@@ -8,21 +8,21 @@ const coverDesigns = PlaceHolderImages.filter((p) =>
 
 export function Showcase() {
   return (
-    <section className="py-20 bg-secondary/50">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">
-            Explore Nossos Designs
+            Centenas de Opções Editáveis no Canva
           </h2>
           <p className="mt-2 text-lg text-muted-foreground">
-            Inspire-se com nossa coleção de capas prontas para personalizar.
+            De super-heróis a princesas, encontre os temas que as crianças mais amam.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {coverDesigns.map((design) => (
             <Card
               key={design.id}
-              className="overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl group"
+              className="overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl group rounded-lg"
             >
               <CardContent className="p-0">
                 <Image

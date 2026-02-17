@@ -9,20 +9,20 @@ const testimonialAvatars = PlaceHolderImages.filter((p) =>
 const testimonials = [
   {
     name: 'Juliana S.',
-    title: 'Estudante',
-    text: 'Amei a praticidade! Personalizei meu caderno em minutos e ficou com a minha cara. A qualidade dos designs é incrível.',
+    title: 'Mãe',
+    text: 'Meu filho amou a capa do Sonic! Foi super fácil de colocar o nome dele. Recomendo muito!',
     avatarId: 'testimonial-avatar-1',
   },
   {
     name: 'Ricardo M.',
-    title: 'Designer',
-    text: 'Como designer, sou exigente. Fiquei impressionado com a curadoria dos templates. Economiza um tempo enorme e o resultado é profissional.',
+    title: 'Professor',
+    text: 'Incrível a variedade! Encontrei todos os personagens que meus alunos gostam. Facilitou muito meu trabalho.',
     avatarId: 'testimonial-avatar-2',
   },
   {
     name: 'Fernanda P.',
-    title: 'Empreendedora',
-    text: 'Usei para criar cadernos para minha marca. O processo foi super intuitivo e o resultado ficou lindo. Recomendo!',
+    title: 'Mãe',
+    text: 'Qualidade excelente e muito prático. Minha filha ficou encantada com a capa da Frozen que fizemos juntas.',
     avatarId: 'testimonial-avatar-3',
   },
 ];
@@ -33,10 +33,10 @@ export function Testimonials() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">
-            O que Nossos Clientes Dizem
+            O que nossos clientes dizem
           </h2>
           <p className="mt-2 text-lg text-muted-foreground">
-            A satisfação de quem já transformou seus cadernos.
+            A satisfação de quem já transformou o material escolar.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -45,7 +45,7 @@ export function Testimonials() {
               (a) => a.id === testimonial.avatarId
             );
             return (
-              <Card key={index} className="flex flex-col">
+              <Card key={index} className="flex flex-col bg-card/80">
                 <CardContent className="pt-6 flex-grow">
                   <p className="italic">"{testimonial.text}"</p>
                 </CardContent>

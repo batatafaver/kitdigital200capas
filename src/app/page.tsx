@@ -6,6 +6,8 @@ import { Hero } from '@/components/landing/Hero';
 import { HowItWorks } from '@/components/landing/HowItWorks';
 import { Showcase } from '@/components/landing/Showcase';
 import { Testimonials } from '@/components/landing/Testimonials';
+import { Bonus } from '@/components/landing/Bonus';
+import { Guarantee } from '@/components/landing/Guarantee';
 
 export default function Home() {
   return (
@@ -13,11 +15,13 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Showcase />
         <HowItWorks />
+        <Showcase />
         <Testimonials />
-        <Faq />
+        <Bonus />
         <CtaSection />
+        <Guarantee />
+        <Faq />
       </main>
       <Footer />
     </div>

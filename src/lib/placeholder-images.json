@@ -2,33 +2,39 @@
   "placeholderImages": [
     {
       "id": "hero-notebooks",
-      "description": "A collection of beautifully designed notebooks spread out on a table.",
-      "imageUrl": "https://images.unsplash.com/photo-1610088661116-6fd2d14fffee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxub3RlYm9va3MlMjBjb2xsZWN0aW9ufGVufDB8fHx8MTc3MTI4NzI4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "notebooks collection"
+      "description": "A collection of beautifully designed kids notebooks with cartoon characters.",
+      "imageUrl": "https://images.unsplash.com/photo-1624627283905-5a6747e72d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxraWRzJTIwbm90ZWJvb2slMjBjb3ZlcnN8ZW58MHx8fHwxNzcxMjg3NTMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids notebook covers"
     },
     {
       "id": "cover-design-1",
-      "description": "Notebook cover with an abstract pastel pattern.",
-      "imageUrl": "https://images.unsplash.com/photo-1558244661-d248897f7bc4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMHBhdHRlcm58ZW58MHx8fHwxNzcxMTk5NDMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract pattern"
+      "description": "Notebook cover with a Sonic the Hedgehog theme.",
+      "imageUrl": "https://picsum.photos/seed/sonic-cover/400/500",
+      "imageHint": "sonic notebook"
     },
     {
       "id": "cover-design-2",
-      "description": "Notebook cover with a minimalist floral design.",
-      "imageUrl": "https://images.unsplash.com/photo-1579167728798-a1cf3d595960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmbG9yYWwlMjBkZXNpZ258ZW58MHx8fHwxNzcxMjg3MjgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "floral design"
+      "description": "Notebook cover with a Super Mario theme.",
+      "imageUrl": "https://images.unsplash.com/photo-1633349105097-0d6ad738d78f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYXJpbyUyMG5vdGVib29rfGVufDB8fHx8MTc3MTI4NzUzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mario notebook"
     },
     {
       "id": "cover-design-3",
-      "description": "Notebook cover with a bold geometric pattern.",
-      "imageUrl": "https://images.unsplash.com/photo-1595411425732-e69c1abe2763?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnZW9tZXRyaWMlMjBwYXR0ZXJufGVufDB8fHx8MTc3MTIyMTMwOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "geometric pattern"
+      "description": "Notebook cover with a Disney's Frozen theme.",
+      "imageUrl": "https://images.unsplash.com/photo-1737811704020-d7d82255da25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmcm96ZW4lMjBub3RlYm9va3xlbnwwfHx8fDE3NzEyODc1MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "frozen notebook"
     },
     {
       "id": "cover-design-4",
-      "description": "Notebook cover with a whimsical watercolor illustration.",
-      "imageUrl": "https://images.unsplash.com/photo-1691670353223-535d0cc431de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3YXRlcmNvbG9yJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc3MTI4NzI4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "watercolor illustration"
+      "description": "Notebook cover with a Mickey Mouse theme.",
+      "imageUrl": "https://picsum.photos/seed/mickey-cover/400/500",
+      "imageHint": "mickey notebook"
+    },
+    {
+      "id": "cover-design-5",
+      "description": "Notebook cover with a Buzz Lightyear theme.",
+      "imageUrl": "https://images.unsplash.com/photo-1727812100173-b33044cd3071?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXp6JTIwbGlnaHR5ZWFyJTIwbm90ZWJvb2t8ZW58MHx8fHwxNzcxMjg3NTMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "buzz lightyear notebook"
     },
     {
       "id": "testimonial-avatar-1",
@@ -47,6 +53,24 @@
       "description": "Portrait of a woman in a professional setting.",
       "imageUrl": "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NzEyMzkxODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional woman"
+    },
+    {
+      "id": "bonus-planner",
+      "description": "A weekly planner for kids.",
+      "imageUrl": "https://images.unsplash.com/photo-1557734864-c78b6dfef1b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxraWRzJTIwcGxhbm5lcnxlbnwwfHx8fDE3NzEyODc1MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids planner"
+    },
+    {
+      "id": "bonus-labels",
+      "description": "Labels for school supplies.",
+      "imageUrl": "https://images.unsplash.com/photo-1571956856246-b07b3683f42d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzY2hvb2wlMjBsYWJlbHN8ZW58MHx8fHwxNzcxMjg3NTMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "school labels"
+    },
+    {
+      "id": "bonus-schedule",
+      "description": "A class schedule for kids.",
+      "imageUrl": "https://images.unsplash.com/photo-1579823730815-0291253396b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjbGFzcyUyMHNjaGVkdWxlfGVufDB8fHx8MTc3MTI4NzUzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "class schedule"
     }
   ]
 }
