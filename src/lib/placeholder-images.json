@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-notebooks",
+      "description": "A collection of beautifully designed notebooks spread out on a table.",
+      "imageUrl": "https://images.unsplash.com/photo-1610088661116-6fd2d14fffee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxub3RlYm9va3MlMjBjb2xsZWN0aW9ufGVufDB8fHx8MTc3MTI4NzI4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "notebooks collection"
+    },
+    {
+      "id": "cover-design-1",
+      "description": "Notebook cover with an abstract pastel pattern.",
+      "imageUrl": "https://images.unsplash.com/photo-1558244661-d248897f7bc4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMHBhdHRlcm58ZW58MHx8fHwxNzcxMTk5NDMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract pattern"
+    },
+    {
+      "id": "cover-design-2",
+      "description": "Notebook cover with a minimalist floral design.",
+      "imageUrl": "https://images.unsplash.com/photo-1579167728798-a1cf3d595960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmbG9yYWwlMjBkZXNpZ258ZW58MHx8fHwxNzcxMjg3MjgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "floral design"
+    },
+    {
+      "id": "cover-design-3",
+      "description": "Notebook cover with a bold geometric pattern.",
+      "imageUrl": "https://images.unsplash.com/photo-1595411425732-e69c1abe2763?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnZW9tZXRyaWMlMjBwYXR0ZXJufGVufDB8fHx8MTc3MTIyMTMwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "geometric pattern"
+    },
+    {
+      "id": "cover-design-4",
+      "description": "Notebook cover with a whimsical watercolor illustration.",
+      "imageUrl": "https://images.unsplash.com/photo-1691670353223-535d0cc431de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3YXRlcmNvbG9yJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc3MTI4NzI4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "watercolor illustration"
+    },
+    {
+      "id": "testimonial-avatar-1",
+      "description": "Portrait of a young woman smiling.",
+      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MTIyMDQ1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-avatar-2",
+      "description": "Portrait of a man with glasses.",
+      "imageUrl": "https://images.unsplash.com/photo-1583195763986-0231686dcd43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzEyNjI5ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-avatar-3",
+      "description": "Portrait of a woman in a professional setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NzEyMzkxODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional woman"
+    }
+  ]
 }
