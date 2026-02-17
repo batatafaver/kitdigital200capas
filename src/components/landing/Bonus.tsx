@@ -14,9 +14,9 @@ const bonusItems = [
     description: 'Deixe o material escolar mais divertido e organizado.',
   },
   {
-    id: 'bonus-schedule',
-    title: 'Horário de Aulas',
-    description: 'Para não esquecer de nenhuma aula e se manter organizado.',
+    id: 'bonus-stickers',
+    title: 'Pack de Figurinhas Divertidos',
+    description: 'Figurinhas para personalizar cadernos e seu filho se divertir.',
   },
 ];
 
