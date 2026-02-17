@@ -20,9 +20,6 @@ const premiumFeatures = [
   '+250 Capas de Caderno Infantil',
   '100% editável no Canva grátis',
   'Arquivos organizados por tema',
-  'Planner Semanal Infantil',
-  'Pack de Adesivos Divertidos',
-  'Etiquetas Escolares Personalizáveis',
   'Acesso prioritário ao suporte',
   'Acesso Vitalício',
   'Suporte prioritário via WhatsApp',
@@ -90,30 +87,25 @@ export function CtaSection() {
             </CardHeader>
             <CardContent className="flex-grow">
               <ul className="space-y-3">
-                {premiumFeatures.map((feature, index) => {
-                  const isBonus = bonusFeatures.includes(feature);
-                  if (isBonus) {
-                    return (
-                      <li
-                        key={index}
-                        className="flex items-center font-medium bg-accent p-3 rounded-lg"
-                      >
-                        <Zap className="h-5 w-5 text-primary mr-3 shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    );
-                  }
-                  return (
-                    <li key={index} className="flex items-center font-medium">
-                      <Check className="h-5 w-5 text-green-500 mr-3 shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  );
-                })}
+                {premiumFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-center font-medium">
+                    <Check className="h-5 w-5 text-green-500 mr-3 shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+                {bonusFeatures.map((feature, index) => (
+                  <li
+                    key={`bonus-${index}`}
+                    className="flex items-center font-medium bg-accent p-3 rounded-lg"
+                  >
+                    <Zap className="h-5 w-5 text-primary mr-3 shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
               </ul>
             </CardContent>
             <CardFooter className="flex-col pt-6">
-              <a href="#oferta" className="w-full">
+              <a href="https://pay.wiapy.com/6993d299f03f185bdc490c2f" className="w-full">
                 <Button
                   size="lg"
                   className="w-full text-xl h-auto py-4 font-bold rounded-full shadow-lg"
