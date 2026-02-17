@@ -12,7 +12,18 @@ export function Hero() {
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight font-headline mt-2">
               +200 Capas de Caderno Infantis Editáveis
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            <div className="my-8 flex justify-center">
+              <Image
+                  src="https://i.postimg.cc/Gp31QvKr/image.png"
+                  alt="Mostruário com dezenas de capas de caderno infantis"
+                  width={800}
+                  height={806}
+                  className="rounded-lg shadow-2xl max-w-full h-auto"
+                  priority
+                  data-ai-hint="notebook covers collage"
+              />
+            </div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Crie capas personalizadas com os personagens favoritos das crianças. São mais de 200 templates prontos para editar no Canva.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -23,17 +34,6 @@ export function Hero() {
              <p className="mt-4 text-sm text-muted-foreground">
               ✓ Acesso Imediato ✓ Editável no Canva ✓ Suporte Exclusivo
             </p>
-          </div>
-          <div className="flex justify-center">
-            <Image
-                src="https://i.postimg.cc/Gp31QvKr/image.png"
-                alt="Mostruário com dezenas de capas de caderno infantis"
-                width={800}
-                height={806}
-                className="rounded-lg shadow-2xl max-w-full h-auto"
-                priority
-                data-ai-hint="notebook covers collage"
-            />
           </div>
         </div>
       </div>
