@@ -59,7 +59,7 @@ export function CtaSection() {
               </ul>
             </CardContent>
             <CardFooter className="flex-col pt-6">
-              <a href="#oferta" className="w-full">
+              <a href="https://pay.wiapy.com/TtJk_ymqy" className="w-full">
                 <Button size="lg" variant="outline" className="w-full">
                   Selecionar Básico
                 </Button>
