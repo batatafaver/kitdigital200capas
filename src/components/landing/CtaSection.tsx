@@ -1,6 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Check } from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+} from '@/components/ui/card';
+import { Check, Star } from 'lucide-react';
 import Image from 'next/image';
 
 const basicFeatures = [
@@ -8,14 +15,17 @@ const basicFeatures = [
   'Temas variados',
   'Editável no Canva gratuito',
 ];
+
 const premiumFeatures = [
-  '+200 Capas de Caderno',
-  'Todos os temas e personagens',
-  'Bônus Exclusivos',
-  'Planner Semanal',
-  'Etiquetas para Material',
-  'Horário de Aulas',
-  'Acesso vitalício',
+  '+250 Capas de Caderno Infantil',
+  '100% editável no Canva grátis',
+  'Arquivos organizados por tema',
+  'Planner Semanal Infantil',
+  'Pack de Adesivos Divertidos',
+  'Etiquetas Escolares Personalizáveis',
+  'Acesso prioritário ao suporte',
+  'Acesso Vitalício',
+  'Suporte prioritário via WhatsApp',
 ];
 
 export function CtaSection() {
@@ -27,11 +37,13 @@ export function CtaSection() {
             Escolha o melhor plano para você
           </h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto items-start">
           <Card className="flex flex-col">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl">Pacote Básico</CardTitle>
-              <CardDescription className="text-4xl font-bold">R$ 10</CardDescription>
+              <CardDescription className="text-4xl font-bold">
+                R$ 10
+              </CardDescription>
             </CardHeader>
             <CardContent className="flex-grow">
               <ul className="space-y-3">
@@ -44,29 +56,41 @@ export function CtaSection() {
               </ul>
             </CardContent>
             <CardFooter className="flex-col pt-6">
-                <Button size="lg" variant="outline" className="w-full">
-                    Selecionar Básico
-                </Button>
-                <div className="mt-4">
-                    <Image
-                        src="https://i.postimg.cc/c48Dp6Hp/image.png"
-                        alt="Formas de pagamento aceitas"
-                        width={351}
-                        height={40}
-                        className="max-w-full h-auto"
-                    />
-                </div>
-                <p className="mt-2 text-xs text-muted-foreground">🔒 Pagamento 100% seguro • Acesso imediato</p>
+              <Button size="lg" variant="outline" className="w-full">
+                Selecionar Básico
+              </Button>
+              <div className="mt-4">
+                <Image
+                  src="https://i.postimg.cc/c48Dp6Hp/image.png"
+                  alt="Formas de pagamento aceitas"
+                  width={351}
+                  height={40}
+                  className="max-w-full h-auto"
+                />
+              </div>
+              <p className="mt-2 text-xs text-muted-foreground">
+                🔒 Pagamento 100% seguro • Acesso imediato
+              </p>
             </CardFooter>
           </Card>
 
-          <Card className="flex flex-col border-primary border-2 relative shadow-2xl">
-            <div className="absolute -top-4 right-4 bg-primary text-primary-foreground text-sm font-bold px-3 py-1 rounded-full">
-              MAIS VENDIDO
+          <Card className="flex flex-col border-primary border-2 relative shadow-2xl pt-8">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-sm font-bold px-4 py-2 rounded-full flex items-center gap-1.5">
+              <Star className="w-4 h-4 fill-current" />
+              MAIS ESCOLHIDO
             </div>
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Pacote Premium</CardTitle>
-              <CardDescription className="text-4xl font-bold text-primary">R$ 19</CardDescription>
+            <CardHeader className="text-center pt-0">
+              <CardTitle className="text-2xl font-bold">
+                Pacote Premium
+              </CardTitle>
+              <div className="mt-2">
+                <p className="text-muted-foreground line-through">De R$ 97,00</p>
+                <p className="text-6xl font-extrabold text-primary flex items-start justify-center">
+                  <span className="text-3xl font-semibold mt-1 mr-1">R$</span>
+                  19
+                  <span className="text-2xl font-semibold">,90</span>
+                </p>
+              </div>
             </CardHeader>
             <CardContent className="flex-grow">
               <ul className="space-y-3">
@@ -79,19 +103,24 @@ export function CtaSection() {
               </ul>
             </CardContent>
             <CardFooter className="flex-col pt-6">
-                <Button size="lg" className="w-full text-lg h-auto py-4">
-                    QUERO O PACOTE PREMIUM
-                </Button>
-                <div className="mt-4">
-                    <Image
-                        src="https://i.postimg.cc/c48Dp6Hp/image.png"
-                        alt="Formas de pagamento aceitas"
-                        width={351}
-                        height={40}
-                        className="max-w-full h-auto"
-                    />
-                </div>
-                <p className="mt-2 text-xs text-muted-foreground">🔒 Pagamento 100% seguro • Acesso imediato</p>
+              <Button
+                size="lg"
+                className="w-full text-xl h-auto py-4 font-bold rounded-full shadow-lg"
+              >
+                QUERO O PREMIUM
+              </Button>
+              <div className="mt-4">
+                <Image
+                  src="https://i.postimg.cc/c48Dp6Hp/image.png"
+                  alt="Formas de pagamento aceitas"
+                  width={351}
+                  height={40}
+                  className="max-w-full h-auto"
+                />
+              </div>
+              <p className="mt-2 text-xs text-muted-foreground">
+                🔒 Pagamento 100% seguro • Acesso imediato
+              </p>
             </CardFooter>
           </Card>
         </div>
