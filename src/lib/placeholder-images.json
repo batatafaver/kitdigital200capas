@@ -8,9 +8,9 @@
     },
     {
       "id": "cover-design-1",
-      "description": "Notebook cover with a Sonic the Hedgehog theme.",
-      "imageUrl": "https://picsum.photos/seed/sonic-cover/400/500",
-      "imageHint": "sonic notebook"
+      "description": "Notebook cover with a Pokemon theme.",
+      "imageUrl": "https://images.unsplash.com/photo-1694420801334-31b0b4b47b4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb2tlbW9uJTIwbm90ZWJvb2t8ZW58MHx8fHwxNzcxMzg5MzY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pokemon notebook"
     },
     {
       "id": "cover-design-2",

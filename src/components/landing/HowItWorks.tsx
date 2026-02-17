@@ -1,12 +1,12 @@
-import { Mail, Paintbrush, Printer } from 'lucide-react';
+import { MessageSquare, Paintbrush, Printer } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
 const steps = [
   {
-    icon: <Mail className="h-10 w-10 text-primary" />,
-    title: '1. Receba por E-mail',
+    icon: <MessageSquare className="h-10 w-10 text-primary" />,
+    title: '1. Receba por WhatsApp',
     description:
-      'Acesso imediato aos arquivos após a confirmação da sua compra.',
+      'Acesso imediato aos arquivos após a confirmação da sua compra, diretamente no seu WhatsApp.',
   },
   {
     icon: <Paintbrush className="h-10 w-10 text-primary" />,
