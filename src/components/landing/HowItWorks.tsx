@@ -1,24 +1,51 @@
 import { MessageSquare, Paintbrush, Printer } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from '@/components/ui/card';
 
 const steps = [
   {
     icon: <MessageSquare className="h-10 w-10 text-primary" />,
     title: '1. Receba por WhatsApp',
-    description:
-      'Acesso imediato aos arquivos após a confirmação da sua compra, diretamente no seu WhatsApp.',
+    description: (
+      <>
+        Acesso imediato aos arquivos após a confirmação da sua compra,{' '}
+        <span className="font-semibold text-foreground">
+          diretamente no seu WhatsApp
+        </span>
+        .
+      </>
+    ),
   },
   {
     icon: <Paintbrush className="h-10 w-10 text-primary" />,
     title: '2. Edite no Canva',
-    description:
-      'Personalize nomes e adicione elementos. Tudo de forma fácil e na versão gratuita do Canva.',
+    description: (
+      <>
+        Personalize nomes e adicione elementos. Tudo de forma fácil e na{' '}
+        <span className="font-semibold text-foreground">
+          versão gratuita do Canva
+        </span>
+        .
+      </>
+    ),
   },
   {
     icon: <Printer className="h-10 w-10 text-primary" />,
     title: '3. Baixe e Imprima',
-    description:
-      'Salve sua arte final em alta resolução e imprima em casa ou na gráfica de sua preferência.',
+    description: (
+      <>
+        Salve sua arte final em alta resolução e{' '}
+        <span className="font-semibold text-foreground">
+          imprima em casa ou na gráfica
+        </span>{' '}
+        de sua preferência.
+      </>
+    ),
   },
 ];
 
@@ -36,10 +63,13 @@ export function HowItWorks() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <Card key={index} className="text-center flex flex-col items-center border-dashed border-2">
+            <Card
+              key={index}
+              className="text-center flex flex-col items-center border-dashed border-2"
+            >
               <CardHeader>
                 <div className="mx-auto bg-accent p-4 rounded-full mb-4">
-                    {step.icon}
+                  {step.icon}
                 </div>
                 <CardTitle>{step.title}</CardTitle>
               </CardHeader>

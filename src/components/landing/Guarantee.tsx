@@ -10,7 +10,16 @@ export function Guarantee() {
             Sua Satisfação é Nossa Garantia!
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito com o nosso pacote de capas, basta nos enviar um e-mail e nós devolveremos 100% do seu dinheiro, sem perguntas e sem burocracia.
+            Você tem{' '}
+            <span className="font-bold text-foreground">
+              7 dias de garantia incondicional
+            </span>
+            . Se por qualquer motivo não ficar satisfeito com o nosso pacote de
+            capas, basta nos enviar um e-mail e nós devolveremos{' '}
+            <span className="font-bold text-foreground">
+              100% do seu dinheiro
+            </span>
+            , sem perguntas e sem burocracia.
           </p>
         </div>
       </div>
