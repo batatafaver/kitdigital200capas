@@ -61,18 +61,6 @@ export function CtaSection() {
                   Selecionar Básico
                 </Button>
               </a>
-              <div className="mt-4">
-                <Image
-                  src="https://i.postimg.cc/c48Dp6Hp/image.png"
-                  alt="Formas de pagamento aceitas"
-                  width={351}
-                  height={40}
-                  className="max-w-full h-auto"
-                />
-              </div>
-              <p className="mt-2 text-xs text-muted-foreground">
-                🔒 Pagamento 100% seguro • Acesso imediato
-              </p>
             </CardFooter>
           </Card>
 
