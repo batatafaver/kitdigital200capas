@@ -56,6 +56,7 @@ export function CtaSection() {
                         className="max-w-full h-auto"
                     />
                 </div>
+                <p className="mt-2 text-xs text-muted-foreground">🔒 Pagamento 100% seguro • Acesso imediato</p>
             </CardFooter>
           </Card>
 
@@ -90,6 +91,7 @@ export function CtaSection() {
                         className="max-w-full h-auto"
                     />
                 </div>
+                <p className="mt-2 text-xs text-muted-foreground">🔒 Pagamento 100% seguro • Acesso imediato</p>
             </CardFooter>
           </Card>
         </div>
