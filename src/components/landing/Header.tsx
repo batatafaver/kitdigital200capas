@@ -11,8 +11,12 @@ export function Header() {
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-2">
-            <Button variant="secondary">OFERTA APENAS HOJE</Button>
-            <Button>Quero as Capas Agora</Button>
+            <a href="#oferta">
+              <Button variant="secondary">OFERTA APENAS HOJE</Button>
+            </a>
+            <a href="#oferta">
+              <Button>Quero as Capas Agora</Button>
+            </a>
           </nav>
         </div>
       </div>

@@ -30,7 +30,7 @@ const premiumFeatures = [
 
 export function CtaSection() {
   return (
-    <section className="py-20 bg-secondary/50">
+    <section id="oferta" className="py-20 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold font-headline">
@@ -56,9 +56,11 @@ export function CtaSection() {
               </ul>
             </CardContent>
             <CardFooter className="flex-col pt-6">
-              <Button size="lg" variant="outline" className="w-full">
-                Selecionar Básico
-              </Button>
+              <a href="#oferta" className="w-full">
+                <Button size="lg" variant="outline" className="w-full">
+                  Selecionar Básico
+                </Button>
+              </a>
               <div className="mt-4">
                 <Image
                   src="https://i.postimg.cc/c48Dp6Hp/image.png"
@@ -103,12 +105,14 @@ export function CtaSection() {
               </ul>
             </CardContent>
             <CardFooter className="flex-col pt-6">
-              <Button
-                size="lg"
-                className="w-full text-xl h-auto py-4 font-bold rounded-full shadow-lg"
-              >
-                QUERO O PREMIUM
-              </Button>
+              <a href="#oferta" className="w-full">
+                <Button
+                  size="lg"
+                  className="w-full text-xl h-auto py-4 font-bold rounded-full shadow-lg"
+                >
+                  QUERO O PREMIUM
+                </Button>
+              </a>
               <div className="mt-4">
                 <Image
                   src="https://i.postimg.cc/c48Dp6Hp/image.png"

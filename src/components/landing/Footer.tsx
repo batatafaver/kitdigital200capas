@@ -10,9 +10,11 @@ export function Footer() {
           <p className="text-muted-foreground mt-2">
             Adquira agora o acesso a centenas de capas e bônus exclusivos.
           </p>
-          <Button size="lg" className="mt-6 text-lg h-auto py-4 px-10">
-            GARANTIR MEU ACESSO +
-          </Button>
+          <a href="#oferta">
+            <Button size="lg" className="mt-6 text-lg h-auto py-4 px-10">
+              GARANTIR MEU ACESSO +
+            </Button>
+          </a>
         </div>
 
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">

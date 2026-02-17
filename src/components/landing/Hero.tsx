@@ -33,9 +33,11 @@ export function Hero() {
               .
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
-                Quero as Capas Agora <ArrowRight className="ml-2" />
-              </Button>
+              <a href="#oferta">
+                <Button size="lg">
+                  Quero as Capas Agora <ArrowRight className="ml-2" />
+                </Button>
+              </a>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
               ✓ Acesso Imediato ✓ Editável no Canva ✓ Suporte Exclusivo
