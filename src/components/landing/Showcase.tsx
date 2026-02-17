@@ -1,10 +1,4 @@
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const coverDesigns = PlaceHolderImages.filter((p) =>
-  p.id.startsWith('cover-design')
-);
 
 export function Showcase() {
   return (
@@ -18,24 +12,15 @@ export function Showcase() {
             De super-heróis a princesas, encontre os temas que as crianças mais amam.
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          {coverDesigns.map((design) => (
-            <Card
-              key={design.id}
-              className="overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl group rounded-lg"
-            >
-              <CardContent className="p-0">
-                <Image
-                  src={design.imageUrl}
-                  alt={design.description}
-                  width={400}
-                  height={500}
-                  className="w-full h-auto object-cover aspect-[4/5]"
-                  data-ai-hint={design.imageHint}
-                />
-              </CardContent>
-            </Card>
-          ))}
+        <div className="flex justify-center">
+          <Image
+            src="https://i.postimg.cc/Gp31QvKr/image.png"
+            alt="Mostruário com dezenas de capas de caderno infantis"
+            width={1007}
+            height={1013}
+            className="rounded-lg shadow-xl max-w-full h-auto"
+            data-ai-hint="notebook covers collage"
+          />
         </div>
       </div>
     </section>
