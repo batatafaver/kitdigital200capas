@@ -61,7 +61,7 @@ export function Showcase() {
                                     src={image.imageUrl}
                                     alt={image.description}
                                     fill
-                                    className="object-cover"
+                                    className="object-contain"
                                     data-ai-hint={image.imageHint}
                                     sizes="(max-width: 640px) 90vw, (max-width: 768px) 50vw, 33vw"
                                 />
