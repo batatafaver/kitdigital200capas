@@ -37,24 +37,6 @@
       "imageHint": "buzz lightyear notebook"
     },
     {
-      "id": "testimonial-avatar-1",
-      "description": "Portrait of a young woman smiling.",
-      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MTIyMDQ1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman portrait"
-    },
-    {
-      "id": "testimonial-avatar-2",
-      "description": "Portrait of a man with glasses.",
-      "imageUrl": "https://images.unsplash.com/photo-1583195763986-0231686dcd43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzEyNjI5ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man portrait"
-    },
-    {
-      "id": "testimonial-avatar-3",
-      "description": "Portrait of a woman in a professional setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NzEyMzkxODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional woman"
-    },
-    {
       "id": "bonus-planner",
       "description": "A weekly planner for kids.",
       "imageUrl": "https://i.postimg.cc/Qtwz77VZ/A_colorful_and_202602112203.jpg",
@@ -131,6 +113,42 @@
       "description": "Children's notebook cover with ballerina.",
       "imageUrl": "https://i.postimg.cc/nhjmLQ7K/8.jpg",
       "imageHint": "notebook cover"
+    },
+    {
+      "id": "testimonial-whatsapp-1",
+      "description": "WhatsApp testimonial screenshot.",
+      "imageUrl": "https://i.postimg.cc/1z9ZDgcL/depoimento-(1).webp",
+      "imageHint": "testimonial message"
+    },
+    {
+      "id": "testimonial-whatsapp-2",
+      "description": "WhatsApp testimonial screenshot.",
+      "imageUrl": "https://i.postimg.cc/MGW81cmx/depoimento-(2).webp",
+      "imageHint": "testimonial message"
+    },
+    {
+      "id": "testimonial-whatsapp-3",
+      "description": "WhatsApp testimonial screenshot.",
+      "imageUrl": "https://i.postimg.cc/rp8L5dNL/depoimento-(3).webp",
+      "imageHint": "testimonial message"
+    },
+    {
+      "id": "testimonial-whatsapp-4",
+      "description": "WhatsApp testimonial screenshot.",
+      "imageUrl": "https://i.postimg.cc/XvV09ZkW/depoimento-(4).webp",
+      "imageHint": "testimonial message"
+    },
+    {
+      "id": "testimonial-whatsapp-5",
+      "description": "WhatsApp testimonial screenshot.",
+      "imageUrl": "https://i.postimg.cc/vmQd51ts/depoimento-(5).webp",
+      "imageHint": "testimonial message"
+    },
+    {
+      "id": "testimonial-whatsapp-6",
+      "description": "WhatsApp testimonial screenshot.",
+      "imageUrl": "https://i.postimg.cc/nLHtqsGn/depoimento-(6).webp",
+      "imageHint": "testimonial message"
     }
   ]
 }
