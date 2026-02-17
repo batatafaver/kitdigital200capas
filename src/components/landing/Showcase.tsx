@@ -14,12 +14,12 @@ export function Showcase() {
         </div>
         <div className="flex justify-center">
           <Image
-            src="https://i.postimg.cc/Gp31QvKr/image.png"
-            alt="Mostruário com dezenas de capas de caderno infantis"
-            width={1007}
-            height={1013}
+            src="https://www.arquivos-digitais.com/wp-content/uploads/2024/01/Capas-de-Caderno-Infantil-Editavel-no-Canva-pack-768x432.jpeg"
+            alt="A vibrant collage of personalized kids' notebooks with popular characters, being edited on a laptop and tablet."
+            width={768}
+            height={432}
             className="rounded-lg shadow-xl max-w-full h-auto"
-            data-ai-hint="notebook covers collage"
+            data-ai-hint="kids notebooks collage"
           />
         </div>
       </div>
