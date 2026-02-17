@@ -1,6 +1,5 @@
 import { CtaSection } from '@/components/landing/CtaSection';
 import { Faq } from '@/components/landing/Faq';
-import { Footer } from '@/components/landing/Footer';
 import { Hero } from '@/components/landing/Hero';
 import { HowItWorks } from '@/components/landing/HowItWorks';
 import { Showcase } from '@/components/landing/Showcase';
@@ -21,7 +20,6 @@ export default function Home() {
         <Guarantee />
         <Faq />
       </main>
-      <Footer />
     </div>
   );
 }
