@@ -15,7 +15,7 @@ const bonusItems = [
   },
   {
     id: 'bonus-stickers',
-    title: 'Pack de Figurinhas Divertidos',
+    title: 'Folha de Figurinhas',
     description: 'Figurinhas para personalizar cadernos e seu filho se divertir.',
   },
 ];
