@@ -1,6 +1,16 @@
+"use client"
+
+import * as React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Autoplay from "embla-carousel-autoplay";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const testimonialImageIds = [
   'testimonial-whatsapp-1',
@@ -12,6 +22,10 @@ const testimonialImageIds = [
 ];
 
 export function Testimonials() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 1000, stopOnInteraction: false })
+  );
+
   const testimonialImages = PlaceHolderImages.filter((p) =>
     testimonialImageIds.includes(p.id)
   );
@@ -27,22 +41,35 @@ export function Testimonials() {
             A satisfação de quem já transformou o material escolar.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {testimonialImages.map((testimonial) => (
-            <Card key={testimonial.id} className="overflow-hidden rounded-lg shadow-lg">
-              <CardContent className="p-0">
-                <Image
-                  src={testimonial.imageUrl}
-                  alt={testimonial.description}
-                  width={400}
-                  height={800}
-                  className="w-full h-auto object-cover"
-                  data-ai-hint={testimonial.imageHint}
-                />
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <Carousel
+            plugins={[plugin.current]}
+            className="w-full"
+            opts={{
+                loop: true,
+                align: 'start',
+            }}
+        >
+            <CarouselContent>
+            {testimonialImages.map((testimonial) => (
+                <CarouselItem key={testimonial.id} className="sm:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                        <Card className="overflow-hidden rounded-lg shadow-lg">
+                        <CardContent className="p-0">
+                            <Image
+                            src={testimonial.imageUrl}
+                            alt={testimonial.description}
+                            width={400}
+                            height={800}
+                            className="w-full h-auto object-cover"
+                            data-ai-hint={testimonial.imageHint}
+                            />
+                        </CardContent>
+                        </Card>
+                    </div>
+                </CarouselItem>
+            ))}
+            </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );
