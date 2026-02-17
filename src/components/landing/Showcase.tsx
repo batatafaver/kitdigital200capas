@@ -2,13 +2,7 @@
 
 import * as React from "react"
 import Image from 'next/image';
-import Autoplay from "embla-carousel-autoplay"
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel"
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const carouselImageIds = [
@@ -26,9 +20,6 @@ const carouselImageIds = [
 
 
 export function Showcase() {
-    const plugin = React.useRef(
-      Autoplay({ delay: 1000, stopOnInteraction: false })
-    )
     const showcaseImages = PlaceHolderImages.filter(p => carouselImageIds.includes(p.id));
 
     return (
@@ -42,33 +33,23 @@ export function Showcase() {
                 De super-heróis a princesas, encontre os temas que as crianças mais amam.
             </p>
             </div>
-            <div className="flex justify-center">
-                 <Carousel
-                    plugins={[plugin.current]}
-                    className="w-full max-w-[300px]"
-                    opts={{
-                      loop: true,
-                    }}
-                >
-                    <CarouselContent>
-                    {showcaseImages.map((image) => (
-                        <CarouselItem key={image.id}>
-                        <div className="p-1">
-                            <div className="relative aspect-square overflow-hidden rounded-lg shadow-lg">
+            <div className="relative w-full overflow-hidden">
+                <div className="flex w-max animate-marquee">
+                    {[...showcaseImages, ...showcaseImages].map((image, index) => (
+                        <div key={`${image.id}-${index}`} className="flex-shrink-0 px-2">
+                             <div className="relative aspect-square w-64 h-64 overflow-hidden rounded-lg shadow-lg">
                                 <Image
                                     src={image.imageUrl}
                                     alt={image.description}
                                     fill
                                     className="object-contain"
                                     data-ai-hint={image.imageHint}
-                                    sizes="(max-width: 640px) 90vw, (max-width: 768px) 50vw, 33vw"
+                                    sizes="256px"
                                 />
                             </div>
                         </div>
-                        </CarouselItem>
                     ))}
-                    </CarouselContent>
-                </Carousel>
+                 </div>
             </div>
         </div>
         </section>
