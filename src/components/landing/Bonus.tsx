@@ -40,7 +40,10 @@ export function Bonus() {
           {bonusItems.map((item) => {
             const image = bonusImages.find((img) => img.id === item.id);
             return (
-              <Card key={item.id} className="text-center overflow-hidden">
+              <Card key={item.id} className="text-center overflow-hidden relative">
+                <div className="absolute top-2 right-2 bg-primary text-primary-foreground text-xs font-bold px-2 py-1 rounded-md z-10">
+                  BÔNUS
+                </div>
                 <CardHeader className="p-0">
                    {image && (
                      <Image
