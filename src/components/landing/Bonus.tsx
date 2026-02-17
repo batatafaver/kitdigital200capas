@@ -1,19 +1,22 @@
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const bonusItems = [
   {
     id: 'bonus-planner',
-    title: 'Planner Semanal',
+    title: 'Planner Semanal Infantil',
+    description: 'Organize a semana das crianças de forma divertida e colorida.',
   },
   {
     id: 'bonus-labels',
     title: 'Etiquetas para Material',
+    description: 'Deixe o material escolar mais divertido e organizado.',
   },
   {
     id: 'bonus-schedule',
     title: 'Horário de Aulas',
+    description: 'Para não esquecer de nenhuma aula e se manter organizado.',
   },
 ];
 
@@ -40,7 +43,7 @@ export function Bonus() {
           {bonusItems.map((item) => {
             const image = bonusImages.find((img) => img.id === item.id);
             return (
-              <Card key={item.id} className="text-center overflow-hidden relative">
+              <Card key={item.id} className="text-center overflow-hidden relative flex flex-col">
                 <div className="absolute top-2 right-2 bg-primary text-primary-foreground text-xs font-bold px-2 py-1 rounded-md z-10">
                   BÔNUS
                 </div>
@@ -56,8 +59,13 @@ export function Bonus() {
                      />
                    )}
                 </CardHeader>
-                <CardContent className="p-4">
+                <CardContent className="p-4 flex-grow">
                   <CardTitle className="text-xl">{item.title}</CardTitle>
+                  {item.description && (
+                    <CardDescription className="mt-2">
+                      {item.description}
+                    </CardDescription>
+                  )}
                 </CardContent>
               </Card>
             );
