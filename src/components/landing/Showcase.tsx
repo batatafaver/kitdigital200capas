@@ -45,7 +45,7 @@ export function Showcase() {
             <div className="flex justify-center">
                  <Carousel
                     plugins={[plugin.current]}
-                    className="w-full max-w-xs sm:max-w-sm md:max-w-md"
+                    className="w-full max-w-[300px]"
                     onMouseEnter={plugin.current.stop}
                     onMouseLeave={plugin.current.reset}
                     opts={{
@@ -56,7 +56,7 @@ export function Showcase() {
                     {showcaseImages.map((image) => (
                         <CarouselItem key={image.id}>
                         <div className="p-1">
-                            <div className="relative aspect-[3/4] overflow-hidden rounded-lg shadow-lg">
+                            <div className="relative aspect-square overflow-hidden rounded-lg shadow-lg">
                                 <Image
                                     src={image.imageUrl}
                                     alt={image.description}
