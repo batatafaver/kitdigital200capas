@@ -7,7 +7,7 @@ import {
   CardDescription,
   CardFooter,
 } from '@/components/ui/card';
-import { Check, Star } from 'lucide-react';
+import { Check, Star, Zap } from 'lucide-react';
 import Image from 'next/image';
 
 const basicFeatures = [
@@ -26,6 +26,12 @@ const premiumFeatures = [
   'Acesso prioritário ao suporte',
   'Acesso Vitalício',
   'Suporte prioritário via WhatsApp',
+];
+
+const bonusFeatures = [
+  'Planner Semanal Infantil',
+  'Pack de Adesivos Divertidos',
+  'Etiquetas Escolares Personalizáveis',
 ];
 
 export function CtaSection() {
@@ -84,12 +90,26 @@ export function CtaSection() {
             </CardHeader>
             <CardContent className="flex-grow">
               <ul className="space-y-3">
-                {premiumFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-center font-medium">
-                    <Check className="h-5 w-5 text-green-500 mr-3 shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
+                {premiumFeatures.map((feature, index) => {
+                  const isBonus = bonusFeatures.includes(feature);
+                  if (isBonus) {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center font-medium bg-accent p-3 rounded-lg"
+                      >
+                        <Zap className="h-5 w-5 text-primary mr-3 shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    );
+                  }
+                  return (
+                    <li key={index} className="flex items-center font-medium">
+                      <Check className="h-5 w-5 text-green-500 mr-3 shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  );
+                })}
               </ul>
             </CardContent>
             <CardFooter className="flex-col pt-6">
