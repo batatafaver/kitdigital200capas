@@ -30,7 +30,7 @@ export function Testimonials() {
           </p>
         </div>
         <div className="relative w-full overflow-hidden">
-            <div className="flex w-max animate-marquee">
+            <div className="flex w-max animate-marquee-slow">
                 {[...testimonialImages, ...testimonialImages].map((testimonial, index) => (
                     <div key={`${testimonial.id}-${index}`} className="flex-shrink-0 px-2">
                         <Card className="overflow-hidden rounded-lg shadow-lg w-72">
