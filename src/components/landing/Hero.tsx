@@ -19,9 +19,6 @@ export function Hero() {
               <Button size="lg">
                 Quero as Capas Agora <ArrowRight className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline">
-                Ver Designs
-              </Button>
             </div>
              <p className="mt-4 text-sm text-muted-foreground">
               ✓ Acesso Imediato ✓ Editável no Canva ✓ Suporte Exclusivo
