@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Check } from 'lucide-react';
+import Image from 'next/image';
 
 const basicFeatures = [
   '+50 Capas de Caderno',
@@ -69,6 +70,15 @@ export function CtaSection() {
               </Button>
             </CardContent>
           </Card>
+        </div>
+        <div className="mt-8 flex justify-center">
+            <Image
+                src="https://i.postimg.cc/c48Dp6Hp/image.png"
+                alt="Formas de pagamento aceitas"
+                width={351}
+                height={40}
+                className="max-w-full h-auto"
+            />
         </div>
       </div>
     </section>
