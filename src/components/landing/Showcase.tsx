@@ -27,7 +27,7 @@ const carouselImageIds = [
 
 export function Showcase() {
     const plugin = React.useRef(
-      Autoplay({ delay: 1000, stopOnInteraction: true })
+      Autoplay({ delay: 1000, stopOnInteraction: false })
     )
     const showcaseImages = PlaceHolderImages.filter(p => carouselImageIds.includes(p.id));
 
@@ -46,8 +46,6 @@ export function Showcase() {
                  <Carousel
                     plugins={[plugin.current]}
                     className="w-full max-w-[300px]"
-                    onMouseEnter={plugin.current.stop}
-                    onMouseLeave={plugin.current.reset}
                     opts={{
                       loop: true,
                     }}
