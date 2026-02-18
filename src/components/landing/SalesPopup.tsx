@@ -70,21 +70,21 @@ export function SalesPopup() {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 w-full max-w-xs">
+    <div className="fixed bottom-4 left-4 z-50 w-full max-w-56">
       <Card className="bg-background/80 backdrop-blur-sm shadow-2xl data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-bottom-2">
-        <CardContent className="p-3">
-          <div className="flex items-center gap-3">
-            <div className="border rounded-full p-2">
-                <DollarSign className="h-5 w-5 text-primary" />
+        <CardContent className="p-2">
+          <div className="flex items-center gap-2">
+            <div className="border rounded-full p-1.5">
+                <DollarSign className="h-4 w-4 text-primary" />
             </div>
             <div className="flex-1">
-              <p className="font-bold text-sm text-foreground">
+              <p className="font-bold text-xs text-foreground">
                 {currentPurchase.name} de {currentPurchase.city}
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs text-muted-foreground">
                 Acabou de adquirir o Pacote Premium!
               </p>
-               <p className="text-xs text-muted-foreground/80 mt-1">{currentPurchase.time}</p>
+               <p className="text-[10px] text-muted-foreground/80 mt-0.5">{currentPurchase.time}</p>
             </div>
           </div>
         </CardContent>
