@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
 
 const names = [
   'Maria S.',
@@ -70,12 +70,12 @@ export function SalesPopup() {
   }
 
   return (
-    <div className="fixed bottom-5 left-5 z-50 w-full max-w-sm">
-      <Card className="shadow-2xl data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-bottom-2">
-        <CardContent className="p-4">
-          <div className="flex items-center gap-4">
-            <div className="bg-primary/10 p-3 rounded-full">
-                <Zap className="h-6 w-6 text-primary" />
+    <div className="fixed bottom-4 left-4 z-50 w-full max-w-xs">
+      <Card className="bg-background/80 backdrop-blur-sm shadow-2xl data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-bottom-2">
+        <CardContent className="p-3">
+          <div className="flex items-center gap-3">
+            <div className="border rounded-full p-2">
+                <DollarSign className="h-5 w-5 text-primary" />
             </div>
             <div className="flex-1">
               <p className="font-bold text-sm text-foreground">
