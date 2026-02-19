@@ -54,12 +54,12 @@ export function Showcase() {
                 <CarouselContent>
                     {showcaseImages.map((image, index) => (
                         <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/5">
-                              <div className="relative aspect-square w-full h-auto overflow-hidden rounded-lg shadow-lg">
+                              <div className="relative aspect-square w-full overflow-hidden rounded-lg shadow-lg">
                                 <Image
                                     src={image.imageUrl}
                                     alt={image.description}
                                     fill
-                                    className="object-contain"
+                                    className="object-cover"
                                     data-ai-hint={image.imageHint}
                                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                                 />
