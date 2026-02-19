@@ -56,7 +56,7 @@ export function Testimonials() {
                                 src={testimonial.imageUrl}
                                 alt={testimonial.description}
                                 fill
-                                className="object-cover"
+                                className="object-contain"
                                 data-ai-hint={testimonial.imageHint}
                                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                             />
