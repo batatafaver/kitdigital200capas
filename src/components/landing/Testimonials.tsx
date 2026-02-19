@@ -42,7 +42,7 @@ export function Testimonials() {
             }}
             plugins={[
                 Autoplay({
-                    delay: 4000,
+                    delay: 2000,
                     stopOnInteraction: false,
                 }),
             ]}
@@ -51,16 +51,15 @@ export function Testimonials() {
             <CarouselContent>
                 {testimonialImages.map((testimonial, index) => (
                     <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
-                        <div className="relative aspect-[1/2] w-full overflow-hidden rounded-lg shadow-lg">
-                            <Image
-                                src={testimonial.imageUrl}
-                                alt={testimonial.description}
-                                fill
-                                className="object-contain"
-                                data-ai-hint={testimonial.imageHint}
-                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                            />
-                        </div>
+                        <Image
+                            src={testimonial.imageUrl}
+                            alt={testimonial.description}
+                            width={281}
+                            height={450}
+                            className="w-full h-auto rounded-lg shadow-lg"
+                            data-ai-hint={testimonial.imageHint}
+                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        />
                     </CarouselItem>
                 ))}
             </CarouselContent>
