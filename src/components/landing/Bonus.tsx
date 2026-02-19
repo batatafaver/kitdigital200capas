@@ -39,11 +39,11 @@ export function Bonus() {
             Comprando o pacote premium você leva também estes bônus incríveis:
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 justify-items-center md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {bonusItems.map((item) => {
             const image = bonusImages.find((img) => img.id === item.id);
             return (
-              <Card key={item.id} className="text-center overflow-hidden relative flex flex-col">
+              <Card key={item.id} className="text-center overflow-hidden relative flex flex-col w-full max-w-sm md:max-w-none">
                 <div className="absolute top-2 right-2 bg-primary text-primary-foreground text-xs font-bold px-2 py-1 rounded-md z-10">
                   BÔNUS
                 </div>
