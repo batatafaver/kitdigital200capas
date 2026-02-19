@@ -8,18 +8,18 @@ import {
 import { Check, Star, Gift, Users } from 'lucide-react';
 import Image from 'next/image';
 
-const mainFeature = '+250 Capas de Caderno Infantil';
+const mainFeature = '+250 capas infantis';
 const premiumFeatures = [
-  '100% editável no Canva grátis',
-  'Arquivos organizados por tema',
-  'Acesso Vitalício',
-  'Suporte prioritário via WhatsApp',
+  'Canva grátis',
+  'Uso pessoal ou comercial',
+  'Acesso vitalício',
+  'Suporte via WhatsApp',
   'Garantia de 7 dias',
 ];
 const bonusFeatures = [
   'Planner Semanal Infantil',
-  'Pack de Adesivos Divertidos',
   'Etiquetas Escolares Personalizáveis',
+  'Folha de Figurinhas Divertidas',
 ];
 
 export function CtaSection() {
@@ -92,7 +92,7 @@ export function CtaSection() {
                   size="lg"
                   className="w-full text-xl h-auto py-4 font-bold rounded-full shadow-lg animate-pulse-cta"
                 >
-                  QUERO COMPRAR AGORA
+                  👉 QUERO COMPRAR AGORA
                 </Button>
               </a>
               <div className="mt-4">

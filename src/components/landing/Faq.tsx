@@ -7,24 +7,16 @@ import {
 
 const faqs = [
   {
-    question: 'O que eu recebo exatamente?',
-    answer:
-      'Você recebe um pacote com dezenas de templates de capas de caderno, em formato PDF, com links para você editar diretamente no Canva.',
+    question: 'Preciso do Canva Pro?',
+    answer: 'Não. Funciona no Canva gratuito.',
   },
   {
-    question: 'Preciso ter o Canva Pro?',
-    answer:
-      'Não! Todos os nossos templates são 100% editáveis na versão gratuita do Canva. Você não precisa de nenhuma assinatura paga.',
-  },
-  {
-    question: 'Posso usar para fins comerciais?',
-    answer:
-      'Sim! Após personalizar, você pode usar as capas para seus produtos comerciais, como cadernos de brinde ou para venda.',
+    question: 'Posso usar para vender capas personalizadas?',
+    answer: 'Sim. Uso comercial liberado.',
   },
   {
     question: 'Como recebo o acesso?',
-    answer:
-      'O acesso é imediato após a confirmação do pagamento. Você receberá um e-mail com todas as instruções e o link para baixar seus arquivos.',
+    answer: 'Via WhatsApp, imediatamente após a compra.',
   },
 ];
 

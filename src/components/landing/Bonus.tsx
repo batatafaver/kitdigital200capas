@@ -10,12 +10,12 @@ const bonusItems = [
   },
   {
     id: 'bonus-labels',
-    title: 'Etiquetas para Material',
+    title: 'Etiquetas Escolares Personalizáveis',
     description: 'Deixe o material escolar mais divertido e organizado.',
   },
   {
     id: 'bonus-stickers',
-    title: 'Folha de Figurinhas',
+    title: 'Folha de Figurinhas Divertidas',
     description: 'Figurinhas para personalizar cadernos e seu filho se divertir.',
   },
 ];
@@ -30,13 +30,13 @@ export function Bonus() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
             <div className="inline-block bg-primary/10 text-primary font-semibold text-sm px-3 py-1 rounded-full mb-2">
-                APENAS HOJE
+                🎁 APENAS HOJE
             </div>
           <h2 className="text-3xl md:text-4xl font-bold font-headline">
-            Bônus exclusivos
+            Leve 3 Bônus Exclusivos
           </h2>
           <p className="mt-2 text-lg text-muted-foreground">
-            Comprando o pacote premium você leva também estes bônus incríveis:
+            Comprando hoje você garante acesso a todo o pacote e mais estes 3 presentes (tudo incluso no pacote).
           </p>
         </div>
         <div className="grid grid-cols-1 justify-items-center md:grid-cols-3 gap-8 max-w-4xl mx-auto">
