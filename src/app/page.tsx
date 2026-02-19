@@ -4,6 +4,7 @@ import { Hero } from '@/components/landing/Hero';
 
 const Problem = dynamic(() => import('@/components/landing/Problem').then(mod => mod.Problem));
 const Agitation = dynamic(() => import('@/components/landing/Agitation').then(mod => mod.Agitation));
+const Solution = dynamic(() => import('@/components/landing/Solution').then(mod => mod.Solution));
 const HowItWorks = dynamic(() => import('@/components/landing/HowItWorks').then(mod => mod.HowItWorks));
 const Showcase = dynamic(() => import('@/components/landing/Showcase').then(mod => mod.Showcase));
 const Testimonials = dynamic(() => import('@/components/landing/Testimonials').then(mod => mod.Testimonials));
@@ -20,6 +21,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <Agitation />
+        <Solution />
         <HowItWorks />
         <Showcase />
         <Testimonials />
