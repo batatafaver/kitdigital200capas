@@ -45,11 +45,11 @@ export function CtaSection() {
                 <p className="text-muted-foreground line-through">De R$ 97,00</p>
                 <p className="text-6xl font-extrabold text-green-600 flex items-start justify-center">
                   <span className="text-3xl font-semibold mt-1 mr-1">R$</span>
-                  10
-                  <span className="text-2xl font-semibold">,00</span>
+                  19
+                  <span className="text-2xl font-semibold">,90</span>
                 </p>
                 <p className="font-semibold text-green-600">
-                  Você economiza R$87,00 + Bônus Exclusivos
+                  Você economiza R$77,10 + Bônus Exclusivos
                 </p>
               </div>
             </CardHeader>
