@@ -36,6 +36,8 @@ export function SalesPopup() {
   const [currentPurchase, setCurrentPurchase] = useState<Purchase | null>(null);
 
   useEffect(() => {
+    let timer: NodeJS.Timeout;
+
     const showRandomPopup = () => {
       const randomName = names[Math.floor(Math.random() * names.length)];
       const randomCity = cities[Math.floor(Math.random() * cities.length)];
@@ -48,20 +50,20 @@ export function SalesPopup() {
       });
       setIsVisible(true);
 
-      setTimeout(() => {
+      // Hide after 6 seconds
+      timer = setTimeout(() => {
         setIsVisible(false);
-      }, 6000); // Hide after 6 seconds
+        // Schedule the next popup
+        const nextDelay = Math.floor(Math.random() * 10000) + 15000;
+        timer = setTimeout(showRandomPopup, nextDelay);
+      }, 6000);
     };
 
     // Show the first popup after a short delay
-    const initialTimeout = setTimeout(showRandomPopup, 8000);
-
-    // Then show a new popup every 15-25 seconds
-    const interval = setInterval(showRandomPopup, Math.floor(Math.random() * 10000) + 15000);
+    timer = setTimeout(showRandomPopup, 8000);
 
     return () => {
-      clearTimeout(initialTimeout);
-      clearInterval(interval);
+      clearTimeout(timer);
     };
   }, []);
 
