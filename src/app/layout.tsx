@@ -1,7 +1,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
-import { SalesPopup } from '@/components/landing/SalesPopup';
 import { Poppins } from 'next/font/google'
 import Script from 'next/script';
 
@@ -31,7 +30,6 @@ export default function RootLayout({
       <body className="font-body antialiased">
         {children}
         <Toaster />
-        <SalesPopup />
         <Script id="meta-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
