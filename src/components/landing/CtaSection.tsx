@@ -10,12 +10,6 @@ import {
 import { Check, Star, Zap } from 'lucide-react';
 import Image from 'next/image';
 
-const basicFeatures = [
-  '+50 Capas de Caderno',
-  'Temas variados',
-  'Editável no Canva gratuito',
-];
-
 const premiumFeatures = [
   '+250 Capas de Caderno Infantil',
   '100% editável no Canva grátis',
@@ -37,36 +31,10 @@ export function CtaSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold font-headline">
-            Escolha o melhor plano para você
+            Acesso Imediato ao Pacote Completo
           </h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto items-start">
-          <Card className="flex flex-col">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Pacote Básico</CardTitle>
-              <CardDescription className="text-4xl font-bold">
-                R$ 10
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex-grow">
-              <ul className="space-y-3">
-                {basicFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-center">
-                    <Check className="h-5 w-5 text-green-500 mr-3 shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-            <CardFooter className="flex-col pt-6">
-              <a href="https://pay.wiapy.com/TtJk_ymqy" className="w-full">
-                <Button size="lg" variant="outline" className="w-full">
-                  Selecionar Básico
-                </Button>
-              </a>
-            </CardFooter>
-          </Card>
-
+        <div className="grid grid-cols-1 gap-8 max-w-lg mx-auto items-start">
           <Card className="flex flex-col border-primary border-2 relative shadow-2xl pt-8">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-sm font-bold px-4 py-2 rounded-full flex items-center gap-1.5">
               <Star className="w-4 h-4 fill-current" />
@@ -105,7 +73,10 @@ export function CtaSection() {
               </ul>
             </CardContent>
             <CardFooter className="flex-col pt-6">
-              <a href="https://pay.wiapy.com/6993d299f03f185bdc490c2f" className="w-full">
+              <a
+                href="https://pay.wiapy.com/6993d299f03f185bdc490c2f"
+                className="w-full"
+              >
                 <Button
                   size="lg"
                   className="w-full text-xl h-auto py-4 font-bold rounded-full shadow-lg"
