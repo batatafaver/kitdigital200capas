@@ -11,7 +11,7 @@ export function Header() {
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-2">
-            <a href="#oferta">
+            <a href="#oferta" className="hidden sm:block">
               <Button variant="secondary">OFERTA APENAS HOJE</Button>
             </a>
             <a href="#oferta">

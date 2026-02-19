@@ -1,6 +1,7 @@
 
 import dynamic from 'next/dynamic';
 import { Hero } from '@/components/landing/Hero';
+import { Header } from '@/components/landing/Header';
 
 const Problem = dynamic(() => import('@/components/landing/Problem').then(mod => mod.Problem));
 const Agitation = dynamic(() => import('@/components/landing/Agitation').then(mod => mod.Agitation));
@@ -17,6 +18,7 @@ const Faq = dynamic(() => import('@/components/landing/Faq').then(mod => mod.Faq
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
+      <Header />
       <main className="flex-1">
         <Hero />
         <Problem />

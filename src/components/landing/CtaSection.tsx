@@ -43,7 +43,7 @@ export function CtaSection() {
               </CardTitle>
               <div className="mt-2">
                 <p className="text-muted-foreground line-through">De R$ 97,00</p>
-                <p className="text-6xl font-extrabold text-green-600 flex items-start justify-center">
+                <p className="text-5xl sm:text-6xl font-extrabold text-green-600 flex items-start justify-center">
                   <span className="text-3xl font-semibold mt-1 mr-1">R$</span>
                   19
                   <span className="text-2xl font-semibold">,90</span>
