@@ -21,6 +21,7 @@ export function Hero() {
                 height={806}
                 className="rounded-lg shadow-2xl max-w-full h-auto"
                 priority
+                sizes="(max-width: 800px) 100vw, 800px"
                 data-ai-hint="notebook covers collage"
               />
             </div>
