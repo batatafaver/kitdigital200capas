@@ -1,4 +1,3 @@
-import { MessageSquare, Paintbrush, Printer } from 'lucide-react';
 import {
   Card,
   CardHeader,
@@ -9,43 +8,20 @@ import {
 
 const steps = [
   {
-    icon: <MessageSquare className="h-10 w-10 text-primary" />,
-    title: '1. Receba por WhatsApp',
-    description: (
-      <>
-        Acesso imediato aos arquivos após a confirmação da sua compra,{' '}
-        <span className="font-semibold text-foreground">
-          diretamente no seu WhatsApp
-        </span>
-        .
-      </>
-    ),
+    icon: '1️⃣',
+    title: 'Receba no WhatsApp',
+    description: 'Após a compra, os arquivos chegam direto no seu WhatsApp.',
   },
   {
-    icon: <Paintbrush className="h-10 w-10 text-primary" />,
-    title: '2. Edite no Canva',
-    description: (
-      <>
-        Personalize nomes e adicione elementos. Tudo de forma fácil e na{' '}
-        <span className="font-semibold text-foreground">
-          versão gratuita do Canva
-        </span>
-        .
-      </>
-    ),
+    icon: '2️⃣',
+    title: 'Edite no Canva',
+    description: 'Altere nome, série e cores com poucos cliques.',
+    note: '👉 Não precisa Canva Pro.',
   },
   {
-    icon: <Printer className="h-10 w-10 text-primary" />,
-    title: '3. Baixe e Imprima',
-    description: (
-      <>
-        Salve sua arte final em alta resolução e{' '}
-        <span className="font-semibold text-foreground">
-          imprima em casa ou na gráfica
-        </span>{' '}
-        de sua preferência.
-      </>
-    ),
+    icon: '3️⃣',
+    title: 'Baixe e imprima',
+    description: 'Alta resolução, pronta para impressão ou envio digital.',
   },
 ];
 
@@ -55,11 +31,8 @@ export function HowItWorks() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">
-            Muito simples de começar a utilizar!
+            🚀 Começar é muito fácil
           </h2>
-          <p className="mt-2 text-lg text-muted-foreground">
-            Em 3 passos você transforma o material escolar.
-          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
@@ -68,13 +41,16 @@ export function HowItWorks() {
               className="text-center flex flex-col items-center border-dashed border-2"
             >
               <CardHeader>
-                <div className="mx-auto bg-accent p-4 rounded-full mb-4">
+                <div className="text-5xl mb-4">
                   {step.icon}
                 </div>
                 <CardTitle>{step.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow">
                 <CardDescription>{step.description}</CardDescription>
+                 {step.note && (
+                   <p className="text-sm text-foreground font-semibold mt-4 bg-accent p-2 rounded-md">{step.note}</p>
+                )}
               </CardContent>
             </Card>
           ))}
