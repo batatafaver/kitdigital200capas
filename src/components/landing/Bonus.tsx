@@ -7,16 +7,19 @@ const bonusItems = [
     id: 'bonus-planner',
     title: 'Planner Semanal Infantil',
     description: 'Organize a semana das crianças de forma divertida e colorida.',
+    price: '19,90'
   },
   {
     id: 'bonus-labels',
     title: 'Etiquetas Escolares Personalizáveis',
     description: 'Deixe o material escolar mais divertido e organizado.',
+    price: '9,90'
   },
   {
     id: 'bonus-stickers',
     title: 'Folha de Figurinhas Divertidas',
     description: 'Figurinhas para personalizar cadernos e seu filho se divertir.',
+    price: '9,90'
   },
 ];
 
@@ -59,13 +62,17 @@ export function Bonus() {
                      />
                    )}
                 </CardHeader>
-                <CardContent className="p-4 flex-grow">
+                <CardContent className="p-4 flex flex-col flex-grow">
                   <CardTitle className="text-xl">{item.title}</CardTitle>
                   {item.description && (
-                    <CardDescription className="mt-2">
+                    <CardDescription className="mt-2 flex-grow">
                       {item.description}
                     </CardDescription>
                   )}
+                  <div className="mt-4">
+                    <p className="text-muted-foreground line-through">De R$ {item.price}</p>
+                    <p className="text-xl font-bold text-green-600">Hoje: GRÁTIS</p>
+                  </div>
                 </CardContent>
               </Card>
             );
