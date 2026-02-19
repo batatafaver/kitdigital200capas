@@ -2,8 +2,13 @@
 
 import * as React from "react"
 import Image from 'next/image';
-
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Autoplay from "embla-carousel-autoplay"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
 
 const carouselImageIds = [
     'carousel-image-1',
@@ -33,24 +38,36 @@ export function Showcase() {
                 De super-heróis a princesas, encontre os temas que as crianças mais amam.
             </p>
             </div>
-            <div className="relative w-full overflow-hidden">
-                <div className="flex w-max animate-marquee">
-                    {[...showcaseImages, ...showcaseImages].map((image, index) => (
-                        <div key={`${image.id}-${index}`} className="flex-shrink-0 px-2">
-                             <div className="relative aspect-square w-64 h-64 overflow-hidden rounded-lg shadow-lg">
+            <Carousel
+                opts={{
+                    align: "start",
+                    loop: true,
+                }}
+                plugins={[
+                    Autoplay({
+                        delay: 2000,
+                        stopOnInteraction: false,
+                    }),
+                ]}
+                className="w-full"
+            >
+                <CarouselContent>
+                    {showcaseImages.map((image, index) => (
+                        <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/5">
+                              <div className="relative aspect-square w-full h-auto overflow-hidden rounded-lg shadow-lg">
                                 <Image
                                     src={image.imageUrl}
                                     alt={image.description}
                                     fill
                                     className="object-contain"
                                     data-ai-hint={image.imageHint}
-                                    sizes="256px"
+                                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                                 />
                             </div>
-                        </div>
+                        </CarouselItem>
                     ))}
-                 </div>
-            </div>
+                </CarouselContent>
+            </Carousel>
         </div>
         </section>
     );

@@ -3,6 +3,13 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Autoplay from "embla-carousel-autoplay"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
+
 
 const testimonialImageIds = [
   'testimonial-whatsapp-1',
@@ -29,26 +36,39 @@ export function Testimonials() {
             A satisfação de quem já transformou o material escolar.
           </p>
         </div>
-        <div className="relative w-full overflow-hidden">
-            <div className="flex w-max animate-marquee-slow">
-                {[...testimonialImages, ...testimonialImages].map((testimonial, index) => (
-                    <div key={`${testimonial.id}-${index}`} className="flex-shrink-0 px-2">
-                        <Card className="overflow-hidden rounded-lg shadow-lg w-72">
+        <Carousel
+            opts={{
+                align: "start",
+                loop: true,
+            }}
+            plugins={[
+                Autoplay({
+                    delay: 2500,
+                    stopOnInteraction: false,
+                }),
+            ]}
+            className="w-full"
+        >
+            <CarouselContent>
+                {testimonialImages.map((testimonial, index) => (
+                    <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
+                        <Card className="overflow-hidden rounded-lg shadow-lg">
                             <CardContent className="p-0">
                                 <Image
                                     src={testimonial.imageUrl}
                                     alt={testimonial.description}
                                     width={400}
                                     height={800}
-                                    className="w-full h-auto object-cover"
+                                    className="w-full h-auto object-cover aspect-[1/2]"
                                     data-ai-hint={testimonial.imageHint}
+                                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                                 />
                             </CardContent>
                         </Card>
-                    </div>
+                    </CarouselItem>
                 ))}
-            </div>
-        </div>
+            </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );
