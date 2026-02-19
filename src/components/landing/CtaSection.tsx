@@ -80,8 +80,8 @@ export function CtaSection() {
                 <p className="text-muted-foreground line-through">De R$ 97,00</p>
                 <p className="text-6xl font-extrabold text-primary flex items-start justify-center">
                   <span className="text-3xl font-semibold mt-1 mr-1">R$</span>
-                  19
-                  <span className="text-2xl font-semibold">,90</span>
+                  10
+                  <span className="text-2xl font-semibold">,00</span>
                 </p>
               </div>
             </CardHeader>
