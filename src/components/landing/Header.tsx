@@ -15,7 +15,7 @@ export function Header() {
               <Button variant="secondary">OFERTA APENAS HOJE</Button>
             </a>
             <a href="#oferta">
-              <Button>Quero as Capas Agora</Button>
+              <Button className="animate-pulse-cta">Quero as Capas Agora</Button>
             </a>
           </nav>
         </div>

@@ -79,7 +79,7 @@ export function CtaSection() {
               >
                 <Button
                   size="lg"
-                  className="w-full text-xl h-auto py-4 font-bold rounded-full shadow-lg"
+                  className="w-full text-xl h-auto py-4 font-bold rounded-full shadow-lg animate-pulse-cta"
                 >
                   QUERO O PREMIUM
                 </Button>

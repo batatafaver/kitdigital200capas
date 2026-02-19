@@ -35,7 +35,7 @@ export function Hero() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#oferta">
-                <Button size="lg">
+                <Button size="lg" className="animate-pulse-cta">
                   Quero as Capas Agora <ArrowRight className="ml-2" />
                 </Button>
               </a>
