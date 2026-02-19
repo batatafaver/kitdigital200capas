@@ -30,13 +30,19 @@ export function Showcase() {
     return (
         <section className="py-20">
         <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                Centenas de Opções Editáveis no Canva
-            </h2>
-            <p className="mt-2 text-lg text-muted-foreground">
-                De super-heróis a princesas, encontre os temas que as crianças mais amam.
-            </p>
+            <div className="text-center mb-12 max-w-2xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                    <span role="img" aria-label="palette emoji" className="mr-2">🎨</span>
+                    Temas que as crianças AMAM
+                </h2>
+                <p className="mt-4 text-lg text-muted-foreground">
+                    De super-heróis a princesas.
+                    <br />
+                    De dinossauros a unicórnios.
+                </p>
+                <p className="mt-2 text-lg text-foreground/90">
+                    Você sempre terá um modelo ideal para cada criança — e isso aumenta o valor percebido.
+                </p>
             </div>
             <Carousel
                 opts={{
@@ -54,7 +60,7 @@ export function Showcase() {
                 <CarouselContent>
                     {showcaseImages.map((image, index) => (
                         <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/5">
-                              <div className="relative aspect-square w-full overflow-hidden rounded-lg shadow-lg">
+                              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg shadow-lg">
                                 <Image
                                     src={image.imageUrl}
                                     alt={image.description}
