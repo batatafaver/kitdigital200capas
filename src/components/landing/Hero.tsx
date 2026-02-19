@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -8,11 +8,14 @@ export function Hero() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-12 items-center">
           <div className="text-center">
-            <p className="text-primary font-semibold">✨ +200 OPÇÕES DE TEMAS</p>
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight font-headline mt-2">
-              +200 Capas de Caderno Infantis{' '}
-              <span className="text-primary">Editáveis</span>
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight font-headline">
+              <span role="img" aria-label="backpack emoji" className="mr-2">🎒</span>
+              Capas de Caderno Infantis Editáveis no Canva
             </h1>
+            <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Material escolar personalizado em minutos — sem saber design
+            </p>
+            
             <div className="my-8 flex justify-center">
               <Image
                 src="https://i.postimg.cc/Gp31QvKr/image.png"
@@ -25,24 +28,36 @@ export function Hero() {
                 data-ai-hint="notebook covers collage"
               />
             </div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Crie capas personalizadas com os personagens favoritos das
-              crianças. São mais de 200 templates prontos para{' '}
-              <span className="font-semibold text-foreground">
-                editar no Canva
-              </span>
-              .
+
+            <p className="text-primary font-semibold text-lg">✨ Mais de 200 capas infantis prontas para editar</p>
+
+            <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Perfeito para mães, professoras e empreendedoras de personalizados que querem algo bonito, rápido e profissional.
             </p>
+
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#oferta">
-                <Button size="lg" className="animate-pulse-cta">
-                  Quero as Capas Agora <ArrowRight className="ml-2" />
+                <Button size="lg" className="animate-pulse-cta h-auto py-3 px-8 text-lg font-bold">
+                  👉 QUERO AS CAPAS AGORA
                 </Button>
               </a>
             </div>
-            <p className="mt-4 text-sm text-muted-foreground">
-              ✓ Acesso Imediato ✓ Editável no Canva ✓ Suporte Exclusivo
-            </p>
+
+            <div className="mt-6 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-x-6 gap-y-2 text-muted-foreground">
+                <div className="flex items-center gap-2">
+                    <Check className="h-4 w-4 text-green-500" />
+                    <span>Acesso imediato</span>
+                </div>
+                <div className="flex items-center gap-2">
+                    <Check className="h-4 w-4 text-green-500" />
+                    <span>Canva 100% gratuito</span>
+                </div>
+                <div className="flex items-center gap-2">
+                    <Check className="h-4 w-4 text-green-500" />
+                    <span>Uso pessoal ou comercial</span>
+                </div>
+            </div>
+
           </div>
         </div>
       </div>
