@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -5,8 +7,11 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Check, Star, Gift, Users } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { useToast } from '@/hooks/use-toast';
+import { Check, Star, Gift, Users, Loader2 } from 'lucide-react';
 import Image from 'next/image';
+import { useState, useEffect, FormEvent } from 'react';
 
 const mainFeature = '+250 capas infantis';
 const premiumFeatures = [
@@ -23,6 +28,75 @@ const bonusFeatures = [
 ];
 
 export function CtaSection() {
+  const [email, setEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  useEffect(() => {
+    if (!localStorage.getItem('external_id')) {
+      localStorage.setItem('external_id', crypto.randomUUID());
+    }
+  }, []);
+
+  const getCookie = (name: string) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop()?.split(';').shift();
+    return null;
+  };
+
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+    setIsLoading(true);
+
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      toast({
+        variant: 'destructive',
+        title: 'E-mail inválido',
+        description: 'Por favor, insira um e-mail válido para continuar.',
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    const external_id = localStorage.getItem('external_id');
+    const fbp = getCookie('_fbp');
+    const fbc = getCookie('_fbc');
+
+    try {
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          external_id,
+          fbp,
+          fbc,
+        }),
+      });
+
+      if (!response.ok) {
+        // Even if the server responds with an error, we redirect to not lose the sale.
+        // The error is logged on the server.
+        console.warn("Falha ao registrar o lead, mas prosseguindo para o checkout.");
+      }
+      
+      // Redirect to checkout
+      window.location.href = 'https://pay.wiapy.com/6993d299f03f185bdc490c2f';
+
+    } catch (error: any) {
+       toast({
+        variant: 'destructive',
+        title: 'Ops! Algo deu errado.',
+        description: 'Não foi possível registrar seu e-mail, mas vamos te levar ao checkout.',
+      });
+      // Redirect even on client-side fetch error
+      setTimeout(() => {
+        window.location.href = 'https://pay.wiapy.com/6993d299f03f185bdc490c2f';
+      }, 1500)
+    }
+  };
+
   return (
     <section id="oferta" className="py-20 bg-secondary/50">
       <div className="container mx-auto px-4">
@@ -84,17 +158,34 @@ export function CtaSection() {
               </ul>
             </CardContent>
             <div className="flex flex-col items-center p-6 pt-6">
-              <a
-                href="https://pay.wiapy.com/6993d299f03f185bdc490c2f"
-                className="w-full"
-              >
+              <form onSubmit={handleSubmit} className="w-full space-y-4">
+                 <div className="space-y-2 text-center">
+                    <label htmlFor="email" className="text-sm font-medium text-foreground">
+                        Informe seu e-mail para continuar
+                    </label>
+                    <Input
+                        id="email"
+                        type="email"
+                        placeholder="seu-melhor-email@exemplo.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="text-center"
+                    />
+                </div>
                 <Button
+                  type="submit"
                   size="lg"
                   className="w-full text-xl h-auto py-4 font-bold rounded-full shadow-lg animate-pulse-cta"
+                  disabled={isLoading}
                 >
-                  👉 QUERO COMPRAR AGORA
+                  {isLoading ? (
+                      <Loader2 className="animate-spin" />
+                  ) : (
+                      '👉 QUERO COMPRAR AGORA'
+                  )}
                 </Button>
-              </a>
+              </form>
               <div className="mt-4">
                 <Image
                   src="https://i.postimg.cc/c48Dp6Hp/image.png"
