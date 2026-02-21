@@ -16,11 +16,11 @@ export async function POST(request: Request) {
     );
   }
 
-  const PIXEL_ID = process.env.META_PIXEL_ID;
-  const ACCESS_TOKEN = process.env.META_ACCESS_TOKEN;
+  const PIXEL_ID = '789884174132576';
+  const ACCESS_TOKEN = 'EAATxETojYt4BQ5CsDBScDB8vPvz1lZCsuCetJLnMuUUIqn2OtU72wnCcVnWRW0EjZBReQ2Fdsc37nPPIoGWgE9s3OcZBhoZAgAFBFolRlhZB4tE1aRGLRp0yhqEtHks1ZAHe9IkLO2FaFFj8O0YRAQMo3Rl3GYQTEszFxRXZBZAYoImoIUwvcLVqwZBFo6p7L0XeXugZDZD';
 
-  if (!PIXEL_ID || !ACCESS_TOKEN || PIXEL_ID === 'SEU_PIXEL_ID_AQUI') {
-    console.error("Variáveis de ambiente META_PIXEL_ID ou META_ACCESS_TOKEN não configuradas.");
+  if (!PIXEL_ID || !ACCESS_TOKEN) {
+    console.error("Credenciais da Meta não configuradas diretamente no código.");
     // In production, you might want to just return success to not block the user
     // but log the error for the developer.
     return NextResponse.json({ message: "Lead recebido, mas evento não enviado por falta de configuração." }, { status: 200 });
