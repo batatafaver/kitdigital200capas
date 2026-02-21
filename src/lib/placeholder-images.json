@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-notebooks",
-      "description": "A vibrant collage of personalized kids' notebooks with popular characters, being edited on a laptop and tablet.",
-      "imageUrl": "https://www.arquivos-digitais.com/wp-content/uploads/2024/01/Capas-de-Caderno-Infantil-Editavel-no-Canva-pack-768x432.jpeg",
-      "imageHint": "kids notebooks collage"
+      "description": "Mostruário com dezenas de capas de caderno infantis",
+      "imageUrl": "https://i.postimg.cc/Gp31QvKr/image.png",
+      "imageHint": "notebook covers collage"
     },
     {
       "id": "cover-design-1",
@@ -51,7 +51,7 @@
     {
       "id": "bonus-stickers",
       "description": "Fun stickers for kids to customize their notebooks.",
-      "imageUrl": "https://i.postimg.cc/SR9vfKzh/A-cheerful-and-202602112202.jpg",
+      "imageUrl": "https://i.postimg.cc/SR9vfKzh/A_cheerful_and-202602112202.jpg",
       "imageHint": "kids stickers"
     },
     {
@@ -149,6 +149,12 @@
       "description": "WhatsApp testimonial screenshot.",
       "imageUrl": "https://i.postimg.cc/nLHtqsGn/depoimento-(6).webp",
       "imageHint": "testimonial message"
+    },
+    {
+      "id": "payment-methods",
+      "description": "Formas de pagamento aceitas",
+      "imageUrl": "https://i.postimg.cc/c48Dp6Hp/image.png",
+      "imageHint": "payment logos"
     }
   ]
 }

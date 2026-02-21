@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
+  const heroImage = PlaceHolderImages.find((p) => p.id === 'hero-notebooks');
+
   return (
     <section className="py-20 sm:py-32">
       <div className="container mx-auto px-4">
@@ -17,16 +20,18 @@ export function Hero() {
             </p>
             
             <div className="my-8 flex justify-center">
-              <Image
-                src="https://i.postimg.cc/Gp31QvKr/image.png"
-                alt="Mostruário com dezenas de capas de caderno infantis"
-                width={800}
-                height={806}
-                className="rounded-lg shadow-2xl max-w-full h-auto"
-                priority
-                sizes="(max-width: 800px) 100vw, 800px"
-                data-ai-hint="notebook covers collage"
-              />
+              {heroImage && (
+                <Image
+                  src={heroImage.imageUrl}
+                  alt={heroImage.description}
+                  width={800}
+                  height={806}
+                  className="rounded-lg shadow-2xl max-w-full h-auto"
+                  priority
+                  sizes="(max-width: 800px) 100vw, 800px"
+                  data-ai-hint={heroImage.imageHint}
+                />
+              )}
             </div>
 
             <p className="text-primary font-semibold text-lg">✨ Mais de 200 capas infantis prontas para editar</p>

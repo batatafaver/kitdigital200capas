@@ -12,6 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Check, Star, Gift, Users, Loader2 } from 'lucide-react';
 import Image from 'next/image';
 import { useState, useEffect, FormEvent } from 'react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const mainFeature = '+250 capas infantis';
 const premiumFeatures = [
@@ -31,6 +32,8 @@ export function CtaSection() {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const paymentImage = PlaceHolderImages.find((p) => p.id === 'payment-methods');
+
 
   useEffect(() => {
     if (!localStorage.getItem('external_id')) {
@@ -187,13 +190,16 @@ export function CtaSection() {
                 </Button>
               </form>
               <div className="mt-4">
-                <Image
-                  src="https://i.postimg.cc/c48Dp6Hp/image.png"
-                  alt="Formas de pagamento aceitas"
-                  width={351}
-                  height={40}
-                  className="max-w-full h-auto"
-                />
+                {paymentImage && (
+                  <Image
+                    src={paymentImage.imageUrl}
+                    alt={paymentImage.description}
+                    width={351}
+                    height={40}
+                    className="max-w-full h-auto"
+                    data-ai-hint={paymentImage.imageHint}
+                  />
+                )}
               </div>
               <p className="mt-2 text-xs text-muted-foreground">
                 🔒 Pagamento 100% seguro • Acesso imediato
